@@ -2,8 +2,22 @@
   display: block;
   width: 100%;
   margin: 0 0.3rem;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    img {
+      opacity: 0.5;
+    }
+    .movieTitle {
+      opacity: 1;
+      z-index: 2;
+      transition: all 0.5s ease-in;
+    }
+  }
 
   .movieTitle {
+    z-index: 0;
+    opacity: 0;
     position: relative;
     width: 90%;
     top: 1.5rem;
@@ -11,11 +25,17 @@
     height: 1rem;
     text-align: start;
     font-size: 1rem;
+    font-weight: 600;
   }
 
   img {
+    z-index: 1;
     height: 10em;
     cursor: pointer;
     transition: all 0.2s ease-in;
+
+    &:hover {
+      height: 12em;
+    }
   }
 }

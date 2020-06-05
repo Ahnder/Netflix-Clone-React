@@ -1,6 +1,15 @@
+.MovieListContainer {
+}
+
 .contentsContainer {
   background: #111111;
   color: whitesmoke;
+
+  h2 {
+    margin-bottom: 0;
+    text-align: start;
+    margin-left: 1.5rem;
+  }
 
   .movieWrapper {
     margin: 2em 0;

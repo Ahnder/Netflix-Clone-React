@@ -25,7 +25,7 @@ const Trending = () => {
 
   return (
     <div className="TrendingContainer contentsContainer">
-      <h2>TrendingComponent</h2>
+      <h2>Trending</h2>
       <div className="movieWrapper">
         {results.map((result) =>
           result.name ? (
