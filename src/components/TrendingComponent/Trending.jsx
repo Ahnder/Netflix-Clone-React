@@ -21,15 +21,26 @@ const Trending = () => {
 
   if (!results) return null;
 
-  console.log(results);
-
   return (
     <div className="TrendingContainer">
       <h2>TrendingComponent</h2>
-      {results.map((result) => (
-        <div key={result.id}>title: {result.name}</div>
-      ))}
-      <Movie />
+      <div>
+        {results.map((result) =>
+          result.name ? (
+            <Movie
+              key={result.id}
+              title={result.name}
+              posterpath={result.backdrop_path}
+            />
+          ) : (
+            <Movie
+              key={result.id}
+              title={result.title}
+              posterpath={result.backdrop_path}
+            />
+          ),
+        )}
+      </div>
     </div>
   );
 };

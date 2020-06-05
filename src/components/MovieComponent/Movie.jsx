@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const Movie = () => {
+const Movie = ({ title, posterpath }) => {
   return (
     <div className="MovieContainer">
-      <p>MovieTitle</p>
-      <p>MoviePosterUrl</p>
+      <p>title: {title}</p>
+      <p>posterpath: {posterpath}</p>
     </div>
   );
 };

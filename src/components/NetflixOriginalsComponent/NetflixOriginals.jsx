@@ -16,15 +16,18 @@ const NetflixOriginals = () => {
 
   if (!results) return null;
 
-  console.log(results);
-
   return (
     <div className="NetflixContainer">
       <h2>NetflixOriginals</h2>
-      {results.map((result) => (
-        <div key={result.id}>title: {result.name}</div>
-      ))}
-      <Movie />
+      <div>
+        {results.map((result) => (
+          <Movie
+            key={result.id}
+            title={result.name}
+            posterpath={result.backdrop_path}
+          />
+        ))}
+      </div>
     </div>
   );
 };
