@@ -9,8 +9,8 @@ import MovieList from './components/LayoutComponent/MovieList';
 const App = () => {
   return (
     <div className="App">
-      <Header />
       <Navigation />
+      <Header />
       <MovieList />
       <Footer />
     </div>
