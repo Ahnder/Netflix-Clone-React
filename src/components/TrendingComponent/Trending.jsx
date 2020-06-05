@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import '../LayoutComponent/contentsContainer.scss';
+
 import Movie from '../MovieComponent/Movie';
 
 import fetchMovieData from '../../lib/api/fetchMovieData';
@@ -22,9 +24,9 @@ const Trending = () => {
   if (!results) return null;
 
   return (
-    <div className="TrendingContainer">
+    <div className="TrendingContainer contentsContainer">
       <h2>TrendingComponent</h2>
-      <div>
+      <div className="movieWrapper">
         {results.map((result) =>
           result.name ? (
             <Movie

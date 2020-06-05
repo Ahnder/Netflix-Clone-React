@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
+import '../LayoutComponent/contentsContainer.scss';
+
 import Movie from '../MovieComponent/Movie';
 
 import fetchMovieData from '../../lib/api/fetchMovieData';
+
+/*
+ *  netflixOriginals api 주소
+ *  https://api.themoviedb.org/3/discover/tv?api_key=7b2585c3179825537cb88b4d13b35e1c&with_networks=213
+ */
 
 const NetflixOriginals = () => {
   const [results, setResults] = useState(null);
@@ -17,9 +24,9 @@ const NetflixOriginals = () => {
   if (!results) return null;
 
   return (
-    <div className="NetflixContainer">
+    <div className="NetflixContainer contentsContainer">
       <h2>NetflixOriginals</h2>
-      <div>
+      <div className="movieWrapper">
         {results.map((result) => (
           <Movie
             key={result.id}
