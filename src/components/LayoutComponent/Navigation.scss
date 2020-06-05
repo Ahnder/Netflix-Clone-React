@@ -17,15 +17,16 @@ nav {
       cursor: pointer;
     }
 
-    .link + .link {
-      margin-left: 2.5rem;
-    }
-
     .leftMenu {
       display: flex;
+      flex: 2;
       justify-content: flex-start;
       position: relative;
       line-height: 4.8rem;
+
+      .link + .link {
+        margin-left: 2.5rem;
+      }
 
       img {
         height: 4rem;
@@ -36,9 +37,9 @@ nav {
     }
     .rightMenu {
       display: flex;
+      flex: 1;
       justify-content: flex-end;
-      margin: 0 auto;
-      margin-right: 4rem;
+      margin-right: 2rem;
 
       .link + .link {
         margin-left: 1rem;
