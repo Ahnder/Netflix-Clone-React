@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 
-import Movie from "../MovieComponent/Movie";
+import Movie from '../MovieComponent/Movie';
+
+import fetchMovieData from '../../lib/api/fetchMovieData';
+
+/*
+ *  Trending api 주소
+ *  https://api.themoviedb.org/3/trending/all/week?api_key=7b2585c3179825537cb88b4d13b35e1c&language=en-US
+ */
 
 const Trending = () => {
+  const [results, setResults] = useState(null);
+
+  const BASE_URL1 = 'trending/all/week';
+  const BASE_URL2 = 'language=en-US';
+
+  useEffect(() => {
+    fetchMovieData(BASE_URL1, BASE_URL2, setResults);
+  }, []);
+
+  if (!results) return null;
+
+  console.log(results);
+
   return (
     <div className="TrendingContainer">
       <h2>TrendingComponent</h2>
+      {results.map((result) => (
+        <div key={result.id}>title: {result.name}</div>
+      ))}
       <Movie />
     </div>
   );
