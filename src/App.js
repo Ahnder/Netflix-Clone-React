@@ -1,12 +1,18 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
 
-import Layout from "./components/LayoutComponent/Layout";
+import Header from './components/LayoutComponent/Header';
+import Navigation from './components/LayoutComponent/Navigation';
+import Footer from './components/LayoutComponent/Footer';
+import MovieList from './components/LayoutComponent/MovieList';
 
 const App = () => {
   return (
     <div className="App">
-      <Layout />
+      <Header />
+      <Navigation />
+      <MovieList />
+      <Footer />
     </div>
   );
 };
