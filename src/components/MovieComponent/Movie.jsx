@@ -5,8 +5,11 @@ import './Movie.scss';
 const Movie = ({ title, posterpath }) => {
   return (
     <div className="MovieContainer">
-      <p>title: {title}</p>
-      <p>posterpath: {posterpath}</p>
+      <div className="movieTitle">{title}</div>
+      <img
+        src={`https://image.tmdb.org/t/p/original/${posterpath}`}
+        alt="poster"
+      />
     </div>
   );
 };
