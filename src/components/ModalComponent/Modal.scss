@@ -1,0 +1,18 @@
+.modalContainer {
+  z-index: 1001;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(44, 44, 44, 0.733);
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .modalWrapper {
+    position: absolute;
+    bottom: 10%;
+    width: 100vw;
+    height: 70vh;
+    background: rgb(44, 44, 44);
+    overflow: hidden;
+  }
+}

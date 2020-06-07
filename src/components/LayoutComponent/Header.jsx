@@ -3,16 +3,14 @@ import { FiPlay, FiPlus, FiInfo } from 'react-icons/fi';
 
 import './Header.scss';
 
-import headerBackgroudImage from '../../static/images/Netflix_Header_Img.jpg';
-
 import fetchMovieData from '../../lib/api/fetchMovieData';
 
 const Header = () => {
   const [results, setResults] = useState(null);
   const [randomNumber, setRandomNumber] = useState(0);
 
-  const BASE_URL1 = 'discover/tv';
-  const BASE_URL2 = 'with_networks=213';
+  const BASE_URL1 = 'trending/all/week';
+  const BASE_URL2 = 'language=en-US';
 
   useEffect(() => {
     fetchMovieData(BASE_URL1, BASE_URL2, setResults);
@@ -39,7 +37,11 @@ const Header = () => {
           alt="headerBackgroudImage"
         />
         <div className="headerContents">
-          <h1>{randomResult.name}</h1>
+          {randomResult.name ? (
+            <h1>{randomResult.name}</h1>
+          ) : (
+            <h1>{randomResult.title}</h1>
+          )}
           <p>{randomResult.overview}</p>
           <div className="headerBtnWrapper">
             <button>
