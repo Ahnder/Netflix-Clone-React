@@ -33,12 +33,14 @@ const Trending = () => {
               key={result.id}
               title={result.name}
               posterpath={result.backdrop_path}
+              overview={result.overview}
             />
           ) : (
             <Movie
               key={result.id}
               title={result.title}
               posterpath={result.backdrop_path}
+              overview={result.overview}
             />
           ),
         )}

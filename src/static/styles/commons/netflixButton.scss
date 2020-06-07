@@ -1,0 +1,31 @@
+button + button {
+  margin-left: 10px;
+}
+
+button {
+  width: 120px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5%;
+  background: #111111;
+  color: whitesmoke;
+  cursor: pointer;
+
+  svg {
+    font-size: 0.8rem;
+  }
+
+  span {
+    margin-left: 5px;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:first-child {
+    background: red;
+  }
+}

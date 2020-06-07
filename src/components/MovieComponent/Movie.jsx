@@ -4,7 +4,7 @@ import './Movie.scss';
 
 import Modal from '../ModalComponent/Modal';
 
-const Movie = ({ title, posterpath }) => {
+const Movie = ({ title, posterpath, overview }) => {
   const [showModal, setShowModal] = useState(false);
 
   const onShowModal = () => {
@@ -23,7 +23,14 @@ const Movie = ({ title, posterpath }) => {
           alt="poster"
         />
       </div>
-      {showModal && <Modal onClick={() => onCloseModal()} />}
+      {showModal && (
+        <Modal
+          onClick={() => onCloseModal()}
+          imgurl={`https://image.tmdb.org/t/p/original/${posterpath}`}
+          title={title}
+          overview={overview}
+        />
+      )}
     </>
   );
 };

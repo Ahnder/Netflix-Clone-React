@@ -1,3 +1,5 @@
+@import '../../static/styles/commons/netflixButton.scss';
+
 .modalContainer {
   z-index: 1001;
   width: 100vw;
@@ -9,10 +11,43 @@
 
   .modalWrapper {
     position: absolute;
-    bottom: 10%;
+    bottom: 15%;
     width: 100vw;
     height: 70vh;
     background: rgb(44, 44, 44);
     overflow: hidden;
+
+    img {
+      position: absolute;
+      display: flex;
+      width: 120%;
+      height: auto;
+      opacity: 0.6;
+    }
+
+    .modalContents {
+      padding: 5% 25%;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      h1 {
+        margin-top: 5%;
+        color: white;
+      }
+
+      p {
+        margin-top: 3%;
+        font-weight: 300;
+        text-transform: none;
+      }
+
+      /* btn div */
+      .modalBtnWrapper {
+        margin-top: 2rem;
+      }
+    }
   }
 }

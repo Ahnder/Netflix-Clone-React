@@ -32,6 +32,7 @@ const NetflixOriginals = () => {
             key={result.id}
             title={result.name}
             posterpath={result.backdrop_path}
+            overview={result.overview}
           />
         ))}
       </div>
