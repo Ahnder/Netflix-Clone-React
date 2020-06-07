@@ -30,6 +30,8 @@ nav {
       position: relative;
       line-height: 4.8rem;
       font-size: 1rem;
+      text-shadow: 0.5px 0 #111111, 0 0.5px #111111, 0.5px 0 #111111,
+        0 0.5px #111111;
 
       .link + .link {
         margin-left: 2.5rem;
@@ -47,6 +49,8 @@ nav {
       flex: 1;
       justify-content: flex-end;
       margin-right: 2rem;
+      text-shadow: 0.5px 0 #111111, 0 0.5px #111111, 0.5px 0 #111111,
+        0 0.5px #111111;
 
       .link + .link {
         margin-left: 1rem;

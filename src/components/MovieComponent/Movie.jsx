@@ -5,9 +5,7 @@ import './Movie.scss';
 const Movie = ({ title, posterpath }) => {
   return (
     <div className="MovieContainer">
-      <div className="movieTitle hover" onContextMenu="return false">
-        {title}
-      </div>
+      <div className="movieTitle hover">{title}</div>
       <img
         src={`https://image.tmdb.org/t/p/original/${posterpath}`}
         alt="poster"
