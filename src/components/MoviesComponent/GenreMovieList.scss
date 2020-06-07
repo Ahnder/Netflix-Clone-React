@@ -1,0 +1,20 @@
+.genreMovieListContainer {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: whitesmoke;
+  margin-top: 3rem;
+
+  .genreMovieContainer + .genreMovieContainer {
+  }
+
+  .genreMovieContainer {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  img {
+    width: 20vw;
+  }
+}

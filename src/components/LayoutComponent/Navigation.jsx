@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FiSearch, FiGift, FiBell, FiSmile } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 import './Navigation.scss';
 
@@ -24,8 +25,12 @@ const Navigation = () => {
       <div className={'navigationContainer ' + (scrollNav && 'scrollDown')}>
         <div className="leftMenu">
           <img src={navigationLeftMenuLogo} alt="navigationLogo" />
-          <div className="link">Home</div>
-          <div className="link">Movies</div>
+          <Link to="/" className="link">
+            Home
+          </Link>
+          <Link to="/movies" className="link">
+            Movies
+          </Link>
           <div className="link">TV Show</div>
           <div className="link">Recently</div>
           <div className="link">My List</div>

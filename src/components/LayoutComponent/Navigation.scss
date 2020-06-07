@@ -17,11 +17,21 @@ nav {
     align-items: center;
     font-size: 1.2rem;
     font-weight: 600;
-    opacity: 0.8;
+    opacity: 0.9;
     transition: all 0.3s ease-in;
 
     .link {
       cursor: pointer;
+      text-decoration: none;
+
+      &:focus,
+      &:hover,
+      &:visited,
+      &:link,
+      &:active {
+        text-decoration: none;
+        color: whitesmoke;
+      }
     }
 
     .leftMenu {

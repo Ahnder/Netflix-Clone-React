@@ -1,0 +1,15 @@
+.categoriesContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 7rem;
+  color: whitesmoke;
+
+  .genre + .genre {
+    margin-left: 1rem;
+  }
+
+  .genre {
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+}
