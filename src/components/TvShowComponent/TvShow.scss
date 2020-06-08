@@ -1,6 +1,6 @@
 .tvShowContainer {
   display: inline-block;
-  margin: 1px;
+  margin: 0 2px;
   cursor: pointer;
 
   .title {
@@ -21,8 +21,28 @@
     width: 22vw;
   }
 
+  .icon {
+    opacity: 0;
+    display: flex;
+    top: -100px;
+    left: 130px;
+    position: relative;
+    border: 2px solid red;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+
+    svg {
+      left: 9px;
+      top: 8px;
+      display: flex;
+      position: relative;
+      color: red;
+    }
+  }
+
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1);
     img {
       opacity: 0.5;
     }
@@ -31,9 +51,9 @@
       z-index: 2;
       transition: all 0.5s ease-in;
     }
+    .icon {
+      opacity: 1;
+      transition: all 0.3s ease-in;
+    }
   }
-}
-
-.tvShowContainer + .tvShowContainer {
-  margin-left: 6px;
 }

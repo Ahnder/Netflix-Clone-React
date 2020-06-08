@@ -1,14 +1,19 @@
 import React from 'react';
+import { FiPlay } from 'react-icons/fi';
 
 import './TvShow.scss';
 
-import tvShowBackdrop from '../../static/images/tvshowbackdrop.jpg';
-
-const TvShow = () => {
+const TvShow = ({ title, backdroppath }) => {
   return (
     <div className="tvShowContainer">
-      <div className="title">TvShowTitle</div>
-      <img src={tvShowBackdrop} alt="TvShowBackdropImage" />
+      <div className="title">{title}</div>
+      <img
+        src={`https://image.tmdb.org/t/p/original/${backdroppath}`}
+        alt="TvShowBackdropImage"
+      />
+      <div className="icon">
+        <FiPlay />
+      </div>
     </div>
   );
 };
