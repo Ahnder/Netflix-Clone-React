@@ -28,8 +28,8 @@ const genreCategories = [
     id: 80,
   },
   {
-    name: 'DOCUMENTARY',
-    id: 99,
+    name: 'FANTASY',
+    id: 14,
   },
   {
     name: 'ADVENTURE',
@@ -37,12 +37,16 @@ const genreCategories = [
   },
 ];
 
-const Categories = () => {
+const Categories = ({ genre, onSelect }) => {
   return (
     <div className="categoriesContainer">
-      {genreCategories.map((genre) => (
-        <div className="genre" key={genre.id}>
-          {genre.name}
+      {genreCategories.map((g) => (
+        <div
+          className={'genre ' + (genre === g.id && 'active')}
+          key={g.id}
+          onClick={() => onSelect(g.id)}
+        >
+          {g.name}
         </div>
       ))}
     </div>
