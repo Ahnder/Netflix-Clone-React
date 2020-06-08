@@ -8,15 +8,38 @@
 
   .genreMovieContainer {
     display: inline-block;
-    margin: 5px;
+    width: 17em;
+    margin: 0 10px;
+
+    &:hover {
+      transform: scale(1.1);
+      img {
+        opacity: 0.5;
+      }
+      .movieTitle {
+        opacity: 1;
+        z-index: 2;
+        transition: all 0.5s ease-in;
+      }
+    }
+
+    .movieTitle {
+      display: block;
+      z-index: 0;
+      opacity: 0;
+      position: relative;
+      width: 70%;
+      top: 1.5rem;
+      left: 1rem;
+      height: 1rem;
+      text-align: start;
+      font-size: 1rem;
+      font-weight: 600;
+    }
   }
 
   img {
     width: 17em;
     cursor: pointer;
-
-    &:hover {
-      width: 18em;
-    }
   }
 }

@@ -4,9 +4,10 @@ import fetchMovieData from '../../lib/api/fetchMovieData';
 
 import './GenreMovieList.scss';
 
-const GenreMovie = ({ posterUrl }) => {
+const GenreMovie = ({ posterUrl, title }) => {
   return (
     <div className="genreMovieContainer">
+      <div className="movieTitle hover">{title}</div>
       <img
         src={`https://image.tmdb.org/t/p/original/${posterUrl}`}
         alt="genreMoviePoster"
@@ -52,7 +53,7 @@ const GenreMovieList = ({ genre }) => {
   return (
     <div className="genreMovieListContainer">
       {results.map((result) => (
-        <GenreMovie posterUrl={result.poster_path} />
+        <GenreMovie posterUrl={result.poster_path} title={result.title} />
       ))}
     </div>
   );

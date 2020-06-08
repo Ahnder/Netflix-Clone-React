@@ -31,7 +31,9 @@ const Navigation = () => {
           <Link to="/movies" className="link">
             Movies
           </Link>
-          <div className="link">TV Show</div>
+          <Link to="/tvshow" className="link">
+            TV Show
+          </Link>
           <div className="link">Recently</div>
           <div className="link">My List</div>
         </div>

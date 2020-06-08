@@ -7,10 +7,11 @@ import './Movies.scss';
 
 const Movies = () => {
   const [genre, setGenre] = useState(18); // genre Drama id 인 18로 초기화설정
-  const onSelect = useCallback((genre) => setGenre(genre), []);
+  const onSelect = useCallback((genre) => setGenre(genre), [genre]);
 
   return (
     <div className="moviesContainer">
+      <h2>MOVIES</h2>
       <Categories genre={genre} onSelect={onSelect} />
       <GenreMovieList genre={genre} />
     </div>

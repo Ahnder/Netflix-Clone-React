@@ -1,13 +1,16 @@
-.moviesContainer {
-  width: 100vw;
+.tvShowListContainer {
+  width: 90vw;
   color: whitesmoke;
+  margin: 0 auto;
   padding-top: 100px;
+  display: inline-block;
+  position: relative;
+  text-align: start;
 
   h2 {
     text-align: start;
     font-size: 2rem;
     font-weight: 800;
     margin: 0;
-    margin-left: 6.5rem;
   }
 }

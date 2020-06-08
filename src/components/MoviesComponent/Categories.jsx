@@ -7,6 +7,15 @@ const genreCategories = [
     name: 'DRAMA',
     id: 18,
   },
+
+  {
+    name: 'CRIME',
+    id: 80,
+  },
+  {
+    name: 'FANTASY',
+    id: 14,
+  },
   {
     name: 'SF',
     id: 878,
@@ -23,14 +32,7 @@ const genreCategories = [
     name: 'WAR',
     id: 10752,
   },
-  {
-    name: 'CRIME',
-    id: 80,
-  },
-  {
-    name: 'FANTASY',
-    id: 14,
-  },
+
   {
     name: 'ADVENTURE',
     id: 12,
